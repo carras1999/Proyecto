@@ -28,10 +28,10 @@ copy ($_FILES['foto']['tmp_name'],$_FILES['foto']['name']);
  ?>
 <div class="footer">
 <form method="get" action="subida.php">
-						<button type="submit">volver</button>
+                        <input class="btn btn-big green" type="submit" value="Volver" />
                     </form>
 <form method="get" action="index.html">
-						<button type="submit">Home</button>
+                        <input class="btn btn-big green" type="submit" value="Home" /> 
                     </form>
 </div>
 </center>

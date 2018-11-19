@@ -22,7 +22,20 @@
 <meta name="twitter:description" content="Alojamiento de imágenes y servicio compartido, sube fotos, subir imágenes. Ofrece soluciones de integración para subir imágenes a foros.">
 <meta name="twitter:title" content="ImgBB — Subir Imágenes — Alojamiento De Imágenes">
 <meta name="twitter:site" content="@imgbb_com">
-<style type="text/css"></style>
+<style type="text/css">
+body  {
+    background-image: url("bg.jpg");
+    
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+</style>
 </head>
 
 
@@ -45,7 +58,7 @@
 </div>
 </header><div id="home-cover" data-content="follow-scroll-opacity">
 <div id="home-cover-content" class="c20 fluid-column center-box padding-left-10 padding-right-10">
-<div id="home_before_title" class="abnr"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0336101706302200" data-ad-slot="3790885643" data-ad-format="horizontal"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><h1>Sube y Edita tus imágenes.</h1>
+<div id="home_before_title" class="abnr"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0336101706302200" data-ad-slot="3790885643" data-ad-format="horizontal"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><h1 style="color:white;">Sube y Edita tus imágenes.</h1>
 <p class="c20 center-box text-align-center phone-hide phablet-hide"></p>
 <div class="home-buttons">
 <form enctype="multipart/form-data" action="uploader.php" method="POST">
@@ -55,3 +68,9 @@
 
 
 </form>
+
+<div class="footer">
+<form method="get" action="index.html">
+                <input class="btn btn-big green" type="submit" value="Home" /> 
+                    </form>
+</div>
