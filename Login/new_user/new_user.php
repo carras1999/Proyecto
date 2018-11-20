@@ -7,9 +7,9 @@ $newpasswd = $_POST["new_passwd"];
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "web";
+$db = "web";
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = mysqli_connect($servername, $username, $password, $db);
 // Check connection
 /*
 if (!$conn) {
@@ -20,14 +20,7 @@ echo "Connected succesfully"."<br>";}
 */
 //select from user where
  $query = "INSERT INTO usuarios (user, pass) VALUES ('$newuser', '$newpasswd');";
-//echo query;
-$result = mysqli_query($conn, $query);
-//var_dump($result);
-$row = mysqli_fetch_array($result);
 //if ok go to loginok.html
-if ($row){
-    header("Location: ../login.html");
-} else {
-    echo "<br>"."ERROOOOOOOOOOOOOOR!!!";
-}
-//if not ok return to login.html
+$result = mysqli_query($conn, $query);
+header("Location: ../login.html");
+

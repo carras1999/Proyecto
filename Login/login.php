@@ -26,7 +26,7 @@ $row = mysqli_fetch_array($result);
 echo $row[0];
 //if ok go to loginok.html
 if ($row){
-    echo "<br>"."login OK";
+    header("Location: ../index.html");
 } else {
     echo "<br>"."login KO";
 }
