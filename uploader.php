@@ -18,16 +18,6 @@ body  {
    color: white;
    text-align: center;
 }
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    text-align: center;
-    padding: 8px;
-}
 </style>
     </head>
 
@@ -40,20 +30,20 @@ copy ($_FILES['foto']['tmp_name'],$_FILES['foto']['name']);
  ?>
  </center>
 <div class="footer">
-<div class="table">
+<table>
 <tr>
-    <th>
+    <td>
     <form method="get" action="subida.php">
                         <input class="btn btn-big green" type="submit" value="Volver" />
                     </form>
-    </th>
-    <th>
+    </td>
+    <td>
     <form method="get" action="index.html">
                         <input class="btn btn-big green" type="submit" value="Home" /> 
                     </form>
-    </th>
+    </td>
 </tr>
-</div>
+</table>
 </div>
 </body>
  </html>
