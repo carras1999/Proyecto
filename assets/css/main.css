@@ -596,6 +596,9 @@ input, select, textarea {
 		}
 
 /* Header */
+header {
+    float: right;
+}
 
 	#footer {
 		width: 100%;
