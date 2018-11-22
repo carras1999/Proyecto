@@ -70,7 +70,7 @@ body  {
 </form>
 
 <div class="footer">
-<form method="get" action="index.html">
+<form method="get" action="../index.html">
                         <input class="btn btn-big green" type="submit" value="Home" /> 
                     </form>
 </div>
