@@ -30,7 +30,7 @@ copy ($_FILES['foto']['tmp_name'],$_FILES['foto']['name']);
  ?>
  </center>
 <div class="footer">
-<table>
+<table style="margin: 0 auto;">
 <tr>
     <td>
     <form method="get" action="subida.php">
