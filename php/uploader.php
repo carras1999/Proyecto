@@ -6,9 +6,20 @@
         <title>Galery subida</title>
         <link rel="stylesheet" href="//simgbb.com/0621/ibb.css">
         <style type="text/css">
-body  {
-    background-image: url("bg.jpg");
-    
+body {
+		background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../images/bg.jpg");
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../images/bg.jpg");
+		background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../images/bg.jpg");
+		background-image: url("images/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../images/bg.jpg");
+		background-position: top left, bottom left, auto;
+		background-size: auto, 100% 100%, cover;
+		background-attachment: fixed;
+		background-repeat: repeat, no-repeat, auto;
+		position: relative;
+		background-color: #150C07;
+		line-height: 1.75em;
+		overflow-x: hidden;
+		overflow-y: auto;
 }
 .footer {
    position: fixed;

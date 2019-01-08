@@ -23,9 +23,20 @@
 <meta name="twitter:title" content="ImgBB — Subir Imágenes — Alojamiento De Imágenes">
 <meta name="twitter:site" content="@imgbb_com">
 <style type="text/css">
-body  {
-    background-image: url("bg.jpg");
-    
+body {
+		background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../images/bg.jpg");
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../images/bg.jpg");
+		background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../images/bg.jpg");
+		background-image: url("images/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../images/bg.jpg");
+		background-position: top left, bottom left, auto;
+		background-size: auto, 100% 100%, cover;
+		background-attachment: fixed;
+		background-repeat: repeat, no-repeat, auto;
+		position: relative;
+		background-color: #150C07;
+		line-height: 1.75em;
+		overflow-x: hidden;
+		overflow-y: auto;
 }
 .footer {
    position: fixed;
@@ -42,21 +53,7 @@ body  {
 
 
 <body id="index" class="split">
-<header id="top-bar" class="top-bar white">
-<div class="content-width">
-
-
-<li data-action="top-bar-menu-full" data-nav="mobile-menu" class="top-btn-el phone-show hidden">
-<span class="top-btn-text"><span class="icon icon-menu3"></span></span>
-</li>
-
-
-
-
-
-</ul>
-</div>
-</header><div id="home-cover" data-content="follow-scroll-opacity">
+<div id="home-cover" data-content="follow-scroll-opacity">
 <div id="home-cover-content" class="c20 fluid-column center-box padding-left-10 padding-right-10">
 <div id="home_before_title" class="abnr"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0336101706302200" data-ad-slot="3790885643" data-ad-format="horizontal"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><h1 style="color:white;">Sube y Edita tus imágenes.</h1>
 <p class="c20 center-box text-align-center phone-hide phablet-hide"></p>
