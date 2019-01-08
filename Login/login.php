@@ -24,8 +24,10 @@ $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result, MYSQLI_NUM);
 $hash = $row[0];
 echo $hash;
-echo $passwd;
+echo "<br>".$passwd;
 //if ok go to loginok.html
+//$hash = password_hash($passwd, PASSWORD_DEFAULT);
+//echo "<br>".$hash;
 if (password_verify($passwd, $hash)){
     //sesion
     session_start();
@@ -37,3 +39,14 @@ if (password_verify($passwd, $hash)){
     echo "<br>"."login KO";
 }
 //if not ok return to login.html
+
+
+/*
+user - qwerty
+pass - qwerty
+hash - $2y$10$eF0eWvm6oRakhSb7i5UhdO9pSJMIe0FecdnNwgdHkp4
+
+user - eustakio
+pass - eustakio
+hash - $2y$10$tI0T6w6XBoYbqHmg61okUO2DqxfDHTGeFeLrKyrFVVr
+*/
