@@ -19,8 +19,9 @@ else{
 echo "Connected succesfully"."<br>";}
 */
 //select from user where
- $query = "INSERT INTO usuarios (user, pass) VALUES ('$newuser', '$newpasswd');";
-//if ok go to loginok.html
+$hash = password_hash($newpasswd, PASSWORD_DEFAULT);
+$query = "INSERT INTO usuarios (user, pass) VALUES ('$newuser', '$hash');";
+
 $result = mysqli_query($conn, $query);
 header("Location: ../login.html");
 

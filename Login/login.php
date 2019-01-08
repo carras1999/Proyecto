@@ -18,15 +18,21 @@ else{
 echo "Connected succesfully"."<br>";}
 
 //select from user where
- $query = "SELECT * FROM usuarios WHERE user = '$user' AND pass = '$passwd'";
-//echo query;
+$query = "SELECT pass FROM usuarios WHERE user = '$user'";
 $result = mysqli_query($conn, $query);
 //var_dump($result);
-$row = mysqli_fetch_array($result);
-echo $row[0];
+$row = mysqli_fetch_array($result, MYSQLI_NUM);
+$hash = $row[0];
+echo $hash;
+echo $passwd;
 //if ok go to loginok.html
-if ($row){
+if (password_verify($passwd, $hash)){
+    //sesion
+    session_start();
+    $_SESSION['usuario'] = $user;
+
     header("Location: ../index.html");
+
 } else {
     echo "<br>"."login KO";
 }
