@@ -38,15 +38,3 @@ if (password_verify($passwd, $hash)){
 } else {
     echo "<br>"."login KO";
 }
-//if not ok return to login.html
-
-
-/*
-user - qwerty
-pass - qwerty
-hash - $2y$10$eF0eWvm6oRakhSb7i5UhdO9pSJMIe0FecdnNwgdHkp4
-
-user - eustakio
-pass - eustakio
-hash - $2y$10$tI0T6w6XBoYbqHmg61okUO2DqxfDHTGeFeLrKyrFVVr
-*/

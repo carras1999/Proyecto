@@ -6,9 +6,9 @@ hash - $2y$10$eF0eWvm6oRakhSb7i5UhdO9pSJMIe0FecdnNwgdHkp4
 pass - eustakio
 hash - $2y$10$tI0T6w6XBoYbqHmg61okUO2DqxfDHTGeFeLrKyrFVVr
 */
-$pass = 'juan';
+$pass = 'asdfg';
 $hash = password_hash($pass, PASSWORD_DEFAULT);
-//$hash = '$2y$10$uvlutkF7XmAWILbDDyM2b.DaE.WnZvHUrQz.T1Afonw2kICEGoLzW';
+//$hash = '$2y$10$EOo9BoSxLqwZfAwPRoZ2buBo8EQmtgfraheD3oqzD9qD7okwidAs6';
 echo $hash . "<br>";
 if (password_verify($pass, $hash)) {
     // Success!

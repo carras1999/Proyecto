@@ -19,6 +19,7 @@ else{
 echo "Connected succesfully"."<br>";}
 */
 //select from user where
+echo $newpasswd;
 $hash = password_hash($newpasswd, PASSWORD_DEFAULT);
 $query = "INSERT INTO usuarios (user, pass) VALUES ('$newuser', '$hash');";
 
