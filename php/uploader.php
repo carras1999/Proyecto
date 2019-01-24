@@ -35,10 +35,12 @@ body {
 <body>
 <center>
 <?php
-copy ($_FILES['foto']['tmp_name'],$_FILES['foto']['name']); 
- $nombre=$_FILES['foto']['name'];
- echo "<img src=\"$nombre\">"
- ?>
+copy ($_FILES['foto']['tmp_name'],"imagenes/" . $_FILES['foto']['name']); 
+
+$nombre=$_FILES['foto']['name'];
+echo "<img src='imagenes/$nombre'>";
+?>
+
  </center>
 <div class="footer">
 <table style="margin: 0 auto;">

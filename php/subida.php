@@ -53,21 +53,70 @@ body {
 
 
 <body id="index" class="split">
+<?php
+    # definimos la carpeta destino
+    $carpetaDestino="imagenes/";
+ 
+    # si hay algun archivo que subir
+    if(isset($_FILES["archivo"]) && $_FILES["archivo"]["name"][0])
+    {
+ 
+        # recorremos todos los arhivos que se han subido
+        for($i=0;$i<count($_FILES["archivo"]["name"]);$i++)
+        {
+ 
+            # si es un formato de imagen
+            if($_FILES["archivo"]["type"][$i]=="image/jpeg" || $_FILES["archivo"]["type"][$i]=="image/pjpeg" || $_FILES["archivo"]["type"][$i]=="image/gif" || $_FILES["archivo"]["type"][$i]=="image/png")
+            {
+ 
+                # si exsite la carpeta o se ha creado
+                if(file_exists($carpetaDestino) || @mkdir($carpetaDestino))
+                {
+                    $origen=$_FILES["archivo"]["tmp_name"][$i];
+                    $destino=$carpetaDestino.$_FILES["archivo"]["name"][$i];
+ 
+                    # movemos el archivo
+                    if(@move_uploaded_file($origen, $destino))
+                    {
+                        echo "<br>".$_FILES["archivo"]["name"][$i]." movido correctamente";
+                    }else{
+                        echo "<br>No se ha podido mover el archivo: ".$_FILES["archivo"]["name"][$i];
+                    }
+                }else{
+                    echo "<br>No se ha podido crear la carpeta: ".$carpetaDestino;
+                }
+            }else{
+                echo "<br>".$_FILES["archivo"]["name"][$i]." - NO es imagen jpg, png o gif";
+            }
+        }
+    }else{
+        
+    }
+    ?>
 <div id="home-cover" data-content="follow-scroll-opacity">
-<div id="home-cover-content" class="c20 fluid-column center-box padding-left-10 padding-right-10">
-<div id="home_before_title" class="abnr"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0336101706302200" data-ad-slot="3790885643" data-ad-format="horizontal"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><h1 style="color:white;">Sube y Edita tus imágenes.</h1>
+
+	<div id="home-cover-content" class="c20 fluid-column center-box padding-left-10 padding-right-10">
+
+	<div id="home_before_title" class="abnr"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0336101706302200" data-ad-slot="3790885643" data-ad-format="horizontal"></ins>
+
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+</div>
+
+<h1 style="color:white;">Sube y Edita tus imágenes.</h1>
+
 <p class="c20 center-box text-align-center phone-hide phablet-hide"></p>
+
 <div class="home-buttons">
-<form enctype="multipart/form-data" action="uploader.php" method="POST">
-<input name="foto" type="file" />
-<input class="btn btn-big green" type="submit" value="Subir archivo" />
+	<form enctype="multipart/form-data" action="uploader.php" method="POST">
+		<input name="foto" type="file" />
+		<input class="btn btn-big green" type="submit" value="Subir archivo" />
+	</form>
 
 
-
-</form>
 
 <div class="footer">
-<form method="get" action="../index.html">
+	<form method="get" action="../index.html">
                         <input class="btn btn-big green" type="submit" value="Home" /> 
                     </form>
 </div>
