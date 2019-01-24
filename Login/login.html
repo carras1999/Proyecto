@@ -50,11 +50,19 @@
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
-					
+				
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Login
 						</button>
+					</div>
+					
+					<div>
+						<script>
+							{% if error == 1 %}
+								<p>Error!!!</p>
+							{% endif %}
+						</script>
 					</div>
 
 					<div class="text-center p-t-136">

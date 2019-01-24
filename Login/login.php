@@ -1,4 +1,7 @@
 <?php
+require_once '../vendor/autoload.php';
+$loader = new Twig_Loader_Filesystem('/');
+$twig = new Twig_Environment($loader);
 //read from the formulary (login.html)
 //user / password
 $user = $_POST["user"];
@@ -15,7 +18,7 @@ if (!$conn) {
     die("Connection failed: ". mysqli_connect_error());
 }
 else{
-echo "Connected succesfully"."<br>";}
+//echo "Connected succesfully"."<br>";}
 
 //select from user where
 $query = "SELECT pass FROM usuarios WHERE user = '$user'";
@@ -23,11 +26,9 @@ $result = mysqli_query($conn, $query);
 //var_dump($result);
 $row = mysqli_fetch_array($result, MYSQLI_NUM);
 $hash = $row[0];
-echo $hash;
-echo "<br>".$passwd;
-//if ok go to loginok.html
-//$hash = password_hash($passwd, PASSWORD_DEFAULT);
-//echo "<br>".$hash;
+
+/*$hash = password_hash($passwd, PASSWORD_DEFAULT);*/
+
 if (password_verify($passwd, $hash)){
     //sesion
     session_start();
@@ -36,5 +37,7 @@ if (password_verify($passwd, $hash)){
     header("Location: ../index.html");
 
 } else {
-    echo "<br>"."login KO";
+    
+    $error=1;
+    echo $twig->render('login.html', ['error' => $error] );
 }
