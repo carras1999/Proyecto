@@ -39,5 +39,4 @@ if (password_verify($passwd, $hash)){
 } else {
     
     $error=1;
-    echo $twig->render('login.html', ['error' => $error] );
-}
+    echo $twig->render('login.html', ['error' => $error] );}
