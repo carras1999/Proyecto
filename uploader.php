@@ -56,6 +56,16 @@ echo "<img src='imagenes/$nombre'>";
                     </form>
     </td>
 </tr>
+
+<tr>
+
+<form method="post" action="img1.php">
+<input type="hidden" name="foto" value="<?php $nombre ?>">
+<input type=submit value=" guardar ">
+</form>
+
+</tr>
+
 </table>
 </div>
 </body>
