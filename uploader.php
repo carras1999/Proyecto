@@ -1,8 +1,8 @@
 <html>
     <head>
-        <link rel="shortcut icon" href="../logo.jpg">
-        <link rel="icon" type="image/png" href="../logo.jpg" sizes="192x192">
-        <link rel="apple-touch-icon" href="../logo.jpg" sizes="180x180">
+        <link rel="shortcut icon" href="images/logo.jpg">
+        <link rel="icon" type="image/png" href="images/logo.jpg" sizes="192x192">
+        <link rel="apple-touch-icon" href="images/logo.jpg" sizes="180x180">
         <title>Galery subida</title>
         <link rel="stylesheet" href="//simgbb.com/0621/ibb.css">
         <style type="text/css">
