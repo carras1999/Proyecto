@@ -77,7 +77,7 @@ body {
 
 
 <div class="footer">
-	<form method="get" action="../index.html">
+	<form method="get" action="index.php">
                         <input class="btn btn-big green" type="submit" value="Home" /> 
                     </form>
 </div>
