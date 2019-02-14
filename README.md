@@ -1,7 +1,7 @@
 # Galeria
 
 
-> Fundadores: Beñat, Ivan y Carlos
+
 
 ## Índice
 
@@ -82,17 +82,9 @@ Si no dentro del archivo composer.json encontraras lo necesario.
 Debido a la mala organizacion se tubo que volver a organizar todo y este es el resultado, la falta de tiempo nos condeno a no poder terminar todo correctamente.
 
 
-# Copyright
+# Fundadores
 
-
-
-
-**Galeria** © 2018-2019, Eibar-Ermua.<br>
-
-
-
-> Beñat &nbsp;&middot;&nbsp;
-> Ivan &nbsp;&middot;&nbsp;
-> Carlos &nbsp;&middot;&nbsp;
-
+- Beñat Vilarchao
+- Carlos Balmaseda
+- Ivan Carrascal
 
