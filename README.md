@@ -46,7 +46,7 @@ Hemos usado:
 
 
 
-Directorios
+### Directorios
 
 
 - `js/`. Directorio de los javascripts.
@@ -60,7 +60,7 @@ Directorios
 
 
 
-Archivos importantes
+### Archivos importantes
 
 
 - [login.php](login.php) valida el login y lleva al [login.html](templates/login.html).
@@ -69,7 +69,7 @@ Archivos importantes
 
 
 
-Recursos a descargar del composer
+### Recursos a descargar del composer
 
 - Twig
 - Invertion/Image (no utilizada)
