@@ -88,3 +88,5 @@ Debido a la mala organizacion se tubo que volver a organizar todo y este es el r
 - Carlos Balmaseda
 - Ivan Carrascal
 
+### la segunda parte (login) esta en el github de beñat: https://github.com/beviga1999/Galeria
+
